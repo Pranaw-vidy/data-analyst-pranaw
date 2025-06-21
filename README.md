@@ -83,6 +83,7 @@ Deliverables:
 •	AWS Monitoring, Governance, and Security Implementation
 ________________________________________
 AWS Deployment and Service Models
+
 Module 1 Case Study: Traditional vs Cloud Computing
 Case Study: Traditional Computing Model vs Cloud Computing Model
 Result & Explanation:
