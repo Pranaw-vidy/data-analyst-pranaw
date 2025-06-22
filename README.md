@@ -71,8 +71,11 @@ Data Catalog is defined as a collection of data schemas or metadata. In step 4, 
 What I Did on AWS:
 Here I have used the Key Management Service on AWS, and I have created the key.Once the key is created, we are attaching this key with a bucket under the S3 service so that when uploading and downloading the file to the S3 bucket, the content of the file is encrypted at the sender's end and then it can be decrypted at the receiver's end. Also, I have attached the versioning to the S3 buckets. Also, I have implemented the replication on AWS, which involves copying the bucket to the new bucket to solve the availability issue.I have done all the above procedures for all three buckets raw bucket, cleaned bucket, and curated bucket on the AWS Data Analytics Platform created for the City of Vancouver.
 
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/13%20Data%20Security%20Key.png
 
        Encryption
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/14%20Data%20Security%20Encrption.png
                 
 6.	Data Governance (Glue Data Quality, Transform Bucket)
 Data Governance is done for the purposes of ensuring data quality, accountability, and compliance for data to be stored, accessed. 
