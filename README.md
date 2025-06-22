@@ -19,6 +19,8 @@ Methodology: The project involved designing and deploying a serverless analytics
    
    What I Did: In Data Ingestion step, Parking Tickets dataset, which is in CSV format, was ingested into the AWS platform by using the Amazon S3 service. 
    On AWS: I have created an Amazon S3 bucket (Raw) which is a data lake container and can store any type of data (structured, unstructured, or semi-structured). S3 buckets have no storage capacity, and             therefore, they are best suited for storing large data. Within the bucket, I designed an organized folder structure to manage and store the dataset effectively. Next, I uploaded the Parking Ticket CSV file to    this folder hierarchy, where it can be accessed by AWS services such as AWS Glue, Glue DataBrew, and Amazon Athena.
+   https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/2%20data%20ingestion%20drawa%20io.png
+   
 
 
  
