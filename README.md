@@ -103,9 +103,12 @@ To monitor, watch, and notify on your data pipeline and infrastructure's behavio
 Here I am monitoring the various metrics for various resources on AWS for the Data Analytics Platform that I have created, related to Vancouver parking tickets by using the AWS cloud service. Here I am creating a dashboard and adding various widgets or graphs by using the AWS CloudWatch service to measure various metrics. Here I am monitoring two resources. First, I am monitoring the storage metric called bucketsizebytes for the bucket size on the S3 raw bucket. Also, I want to see how long it takes to run a given job on the AWS Glue service. This metric is called resource usage metrics. These metrics are used for measuring the resource usage on AWS.In order to have the controlling action we need to have the threshold and alarm. Here I am creating an alarm on AWS under the AWS Cloud Watch and creating a threshold “115k Bytes” on the AWS S3 bucket on its bucket size metrics. Here, I will be notified on my UCW email once this threshold is crossed.So I have added bucket size byte metric on AWS S3 raw bucket, resource usage metrics for AWS Glue service for job run time, and also AWS S3 threshold alarm in the centre dashboard.I have also used the AWS Cloud Trail service to track user activity, such as who logged in to my account on AWS, and  see who accessed my data on the AWS Data Analytics platform in the Event History tab under AWS Cloud Trail.
 
     AWS Clows Watch
- 
+
+    https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/18%20Data%20Monitoring%20Cloud%20watch.png
 
     AWS cloud Trail
+
+     https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/19%20Data%20Monitring%20Cloud%20Trail.png
  
 
 
