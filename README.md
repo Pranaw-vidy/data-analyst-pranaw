@@ -54,8 +54,7 @@ Data Catalog is defined as a collection of data schemas or metadata. In step 4, 
   	
         Visual ETL
   	
-  	    https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/9%20Data%20Cataloging%20AWS%20View%20ETL.png
- 
+  	     https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/9%20Data%20Cataloging%20AWS%20View%20ETL.png
 
 
 7.	Data Querying (Amazon Athena)
