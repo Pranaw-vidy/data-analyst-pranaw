@@ -33,10 +33,11 @@ Methodology: The project involved designing and deploying a serverless analytics
 What I Did: 
 I utilized the AWS Glue DataBrew service in the Data Profiling phase to execute the full profiling of the Parking Tickets data on Amazon S3 bucket.Firstly,I have created a new bucket (Cleaned) to keep profiling outputs. By using DataBrew, I defined the profiling job in DataBrew and then ran the profiling job that read and examined the full dataset.
 
+  https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/4%20Data%20Profiling%20and%20Cleaning%20Draw%20io.png
  
  
  
-4.	Data Cataloging (AWS Glue, Data Catalog)
+5.	Data Cataloging (AWS Glue, Data Catalog)
 What I Did: 
 Data Catalog is defined as a collection of data schemas or metadata. In step 4, first, I have used the AWS crawler that takes the ParkingTickets csv file from the cleaned bucket and converts it to a table and puts it in the Data catalog, which is a database containing the ParkingTickets table. A data catalog in the AWS platform is created by using an AWS service called AWS Glue. Once I had the Parking Tickets table in the data catalog (Database), I proceeded with the ETL process. In the ETL process, first, I have extracted the cleaned Parking Ticket data from the database. Here, since I have only one dataset, no enrichment is needed, which involves joining multiple tables using primary keys and foreign keys to make one big table. I have then created the new bucket (curated). I have then loaded the parking ticket cleaned data to two folder locations, /user and /system, in the newly created bucket (curated). This completes the ETL process, generates a Single source of truth (SSOT) that can be queried using the Athena AWS service by issuing SQL queries.
 
@@ -47,11 +48,11 @@ Data Catalog is defined as a collection of data schemas or metadata. In step 4, 
  
 
 
-5.	Data Querying (Amazon Athena)
+6.	Data Querying (Amazon Athena)
  
  
  
-6.	Data Security (KMS, S3 Versioning, Replication)
+7.	Data Security (KMS, S3 Versioning, Replication)
 What I Did on AWS:
 Here I have used the Key Management Service on AWS, and I have created the key.Once the key is created, we are attaching this key with a bucket under the S3 service so that when uploading and downloading the file to the S3 bucket, the content of the file is encrypted at the sender's end and then it can be decrypted at the receiver's end. Also, I have attached the versioning to the S3 buckets. Also, I have implemented the replication on AWS, which involves copying the bucket to the new bucket to solve the availability issue.I have done all the above procedures for all three buckets raw bucket, cleaned bucket, and curated bucket on the AWS Data Analytics Platform created for the City of Vancouver.
 
