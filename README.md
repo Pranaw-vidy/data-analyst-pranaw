@@ -81,16 +81,23 @@ Here I have used the Key Management Service on AWS, and I have created the key.O
 Data Governance is done for the purposes of ensuring data quality, accountability, and compliance for data to be stored, accessed. 
 What I Did On AWS:
 Here, I am implementing data governance on the data analysis platform built with AWS, such as setting a set of rules and enforcing them. I am specifically conducting a data quality check on the files that are loaded into the S3 raw bucket with AWS Glue Data Quality rules.I have created following three ruleset in AWS and created a Glue job to transform according to the rules. On execution of the job, it verifies data against the given conditions. It outputs to the transform bucket in two folders:The passed folder contains files that meet all quality standards.The failed folder contains those records that don't meet one or more of the rules. So here in the viewetl by using the AWS Glue service, I am extracting the data from the S3 raw bucket, then doing the quality checking by defining three rules, and then loading the passed and failed data under the passed and failed folders under the S3 transform bucket.
- 
 
+      Passed
+ 
+      https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/15%20Data%20Governance%20passed.png
+  	
       Failed
+
+  	    https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/16%20Data%20Governance%20failed.png
  
 
       View ETL
+
+      https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/17Data%20Governace%20View%20etlpng.png
  
 
 
-7.	Data Monitoring (CloudWatch, CloudTrail)
+8.	Data Monitoring (CloudWatch, CloudTrail)
 To monitor, watch, and notify on your data pipeline and infrastructure's behavior.
  What I did on AWS:
 Here I am monitoring the various metrics for various resources on AWS for the Data Analytics Platform that I have created, related to Vancouver parking tickets by using the AWS cloud service. Here I am creating a dashboard and adding various widgets or graphs by using the AWS CloudWatch service to measure various metrics. Here I am monitoring two resources. First, I am monitoring the storage metric called bucketsizebytes for the bucket size on the S3 raw bucket. Also, I want to see how long it takes to run a given job on the AWS Glue service. This metric is called resource usage metrics. These metrics are used for measuring the resource usage on AWS.In order to have the controlling action we need to have the threshold and alarm. Here I am creating an alarm on AWS under the AWS Cloud Watch and creating a threshold “115k Bytes” on the AWS S3 bucket on its bucket size metrics. Here, I will be notified on my UCW email once this threshold is crossed.So I have added bucket size byte metric on AWS S3 raw bucket, resource usage metrics for AWS Glue service for job run time, and also AWS S3 threshold alarm in the centre dashboard.I have also used the AWS Cloud Trail service to track user activity, such as who logged in to my account on AWS, and  see who accessed my data on the AWS Data Analytics platform in the Event History tab under AWS Cloud Trail.
