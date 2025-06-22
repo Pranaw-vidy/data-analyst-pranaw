@@ -45,18 +45,30 @@ I utilized the AWS Glue DataBrew service in the Data Profiling phase to execute 
 What I Did: 
 Data Catalog is defined as a collection of data schemas or metadata. In step 4, first, I have used the AWS crawler that takes the ParkingTickets csv file from the cleaned bucket and converts it to a table and puts it in the Data catalog, which is a database containing the ParkingTickets table. A data catalog in the AWS platform is created by using an AWS service called AWS Glue. Once I had the Parking Tickets table in the data catalog (Database), I proceeded with the ETL process. In the ETL process, first, I have extracted the cleaned Parking Ticket data from the database. Here, since I have only one dataset, no enrichment is needed, which involves joining multiple tables using primary keys and foreign keys to make one big table. I have then created the new bucket (curated). I have then loaded the parking ticket cleaned data to two folder locations, /user and /system, in the newly created bucket (curated). This completes the ETL process, generates a Single source of truth (SSOT) that can be queried using the Athena AWS service by issuing SQL queries.
 
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/7%20Data%20Cataloging%20Draw%20io.png
+
  
-      Parking Ticket Schema
+       Parking Ticket Schema
+
+  	    https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/8%20Data%20Cataloging%20AWS%20implematation.png
   	
-      Visual ETL
+        Visual ETL
+  	
+  	    https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/9%20Data%20Cataloging%20AWS%20View%20ETL.png
  
 
 
-6.	Data Querying (Amazon Athena)
+7.	Data Querying (Amazon Athena)
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/10%20Data%20querying%20Draw%20io.png
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/11%20Data%20Cataloging%20aws%20athena.png
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/12%20Data%20Querying%20athena%20result.png
  
  
  
-7.	Data Security (KMS, S3 Versioning, Replication)
+9.	Data Security (KMS, S3 Versioning, Replication)
 What I Did on AWS:
 Here I have used the Key Management Service on AWS, and I have created the key.Once the key is created, we are attaching this key with a bucket under the S3 service so that when uploading and downloading the file to the S3 bucket, the content of the file is encrypted at the sender's end and then it can be decrypted at the receiver's end. Also, I have attached the versioning to the S3 buckets. Also, I have implemented the replication on AWS, which involves copying the bucket to the new bucket to solve the availability issue.I have done all the above procedures for all three buckets raw bucket, cleaned bucket, and curated bucket on the AWS Data Analytics Platform created for the City of Vancouver.
 
