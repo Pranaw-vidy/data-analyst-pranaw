@@ -33,7 +33,11 @@ Methodology: The project involved designing and deploying a serverless analytics
 What I Did: 
 I utilized the AWS Glue DataBrew service in the Data Profiling phase to execute the full profiling of the Parking Tickets data on Amazon S3 bucket.Firstly,I have created a new bucket (Cleaned) to keep profiling outputs. By using DataBrew, I defined the profiling job in DataBrew and then ran the profiling job that read and examined the full dataset.
 
-  https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/4%20Data%20Profiling%20and%20Cleaning%20Draw%20io.png
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/4%20Data%20Profiling%20and%20Cleaning%20Draw%20io.png
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/5%20Data%20cleaning%20excel.png
+
+       https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/6%20Data%20cleaning%20AWS%20implematation.png
  
  
  
