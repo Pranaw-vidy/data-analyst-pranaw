@@ -16,20 +16,22 @@ Methodology: The project involved designing and deploying a serverless analytics
 
 
 1.	Data Ingestion (S3 Raw Bucket)
-What I Did: In Data Ingestion step, Parking Tickets dataset, which is in CSV format, was ingested into the AWS platform by using the Amazon S3 service. 
-On AWS: I have created an Amazon S3 bucket (Raw) which is a data lake container and can store any type of data (structured, unstructured, or semi-structured). S3 buckets have no storage capacity, and therefore, they are best suited for storing large data. Within the bucket, I designed an organized folder structure to manage and store the dataset effectively. Next, I uploaded the Parking Ticket CSV file to this folder hierarchy, where it can be accessed by AWS services such as AWS Glue, Glue DataBrew, and Amazon Athena.
+   
+   What I Did: In Data Ingestion step, Parking Tickets dataset, which is in CSV format, was ingested into the AWS platform by using the Amazon S3 service. 
+   On AWS: I have created an Amazon S3 bucket (Raw) which is a data lake container and can store any type of data (structured, unstructured, or semi-structured). S3 buckets have no storage capacity, and             therefore, they are best suited for storing large data. Within the bucket, I designed an organized folder structure to manage and store the dataset effectively. Next, I uploaded the Parking Ticket CSV file to    this folder hierarchy, where it can be accessed by AWS services such as AWS Glue, Glue DataBrew, and Amazon Athena.
+
 
  
  
 
-2.	Data Profiling and Cleaning (Glue DataBrew)
+3.	Data Profiling and Cleaning (Glue DataBrew)
 What I Did: 
 I utilized the AWS Glue DataBrew service in the Data Profiling phase to execute the full profiling of the Parking Tickets data on Amazon S3 bucket.Firstly,I have created a new bucket (Cleaned) to keep profiling outputs. By using DataBrew, I defined the profiling job in DataBrew and then ran the profiling job that read and examined the full dataset.
 
  
  
  
-3.	Data Cataloging (AWS Glue, Data Catalog)
+4.	Data Cataloging (AWS Glue, Data Catalog)
 What I Did: 
 Data Catalog is defined as a collection of data schemas or metadata. In step 4, first, I have used the AWS crawler that takes the ParkingTickets csv file from the cleaned bucket and converts it to a table and puts it in the Data catalog, which is a database containing the ParkingTickets table. A data catalog in the AWS platform is created by using an AWS service called AWS Glue. Once I had the Parking Tickets table in the data catalog (Database), I proceeded with the ETL process. In the ETL process, first, I have extracted the cleaned Parking Ticket data from the database. Here, since I have only one dataset, no enrichment is needed, which involves joining multiple tables using primary keys and foreign keys to make one big table. I have then created the new bucket (curated). I have then loaded the parking ticket cleaned data to two folder locations, /user and /system, in the newly created bucket (curated). This completes the ETL process, generates a Single source of truth (SSOT) that can be queried using the Athena AWS service by issuing SQL queries.
 
