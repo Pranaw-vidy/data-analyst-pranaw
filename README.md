@@ -2,7 +2,10 @@
 Portfolio Project: AWS-Based Data Analytics Platform for Vancouver Parking Tickets
 ________________________________________
 Project Description
+
 Project Title: Descriptive Analysis of Parking Violations in Vancouver Using AWS
+
+https://github.com/Pranaw-vidy/data-analyst-pranaw/blob/main/1DAP.png
  
 Objective: The objective is to build a cloud-native Data Analytics Platform (DAP) using AWS services to analyze parking violation trends and derive actionable insights for the City of Vancouver. This analysis supports better policy enforcement, city planning, and public compliance.
 Dataset:
